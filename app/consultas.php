@@ -4,8 +4,9 @@ $host = "clinica.cvhmfndeld5j.us-east-1.rds.amazonaws.com";
 $user = "admin"; // Usuario por defecto en XAMPP
 $pass = getenv('BDD_PASS'); // Contraseña vacía por defecto
 $db = "clinica"; // Cambiar al nombre de tu base de datos
+$port = 3306;
 
-$conn = new mysqli($host, $user, $pass, $db);
+$conn = new mysqli($host, $user, $pass, $db, $port);
 
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
